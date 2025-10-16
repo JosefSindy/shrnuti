@@ -23,7 +23,13 @@ body {
       transform: translateX(0px);
     }
   }
-  
+  .introo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+  }
   #intro {
     position: fixed;
     top: 0;
@@ -35,13 +41,33 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999; 
+    opacity: 0;
     transition: opacity 1s ease-out;
   }
-  
+
+
+
+#intro.visible {
+  opacity: 1;
+}
+  .loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #212527; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   #intro h1 {
     font-size: 4rem;
     color: white;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.315);
     padding: 1rem 2rem;
     border-radius: 10px;
     letter-spacing: 2px;
@@ -109,4 +135,3 @@ body {
     font-size: 1.2rem;
     text-align: center;
   }
-  

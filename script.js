@@ -1,5 +1,4 @@
-
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const intro = document.getElementById("intro");
     intro.style.opacity = "0";
@@ -18,3 +17,21 @@ function scrollToTop() {
 function openProject(url) {
   window.location.href = url;
 }
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("intro");
+
+  intro.classList.add("visible");
+
+  setTimeout(() => {
+    intro.classList.remove("visible");
+
+    
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 1000); 
+  }, 3000);
+});
+
